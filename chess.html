@@ -9,7 +9,7 @@
 	{
 	    width: 900px;
 	    height: 900px;
-	    background-color: #501111;
+	    background-color: #333333;
 	    border-radius: 10px;
 	    vertical-align: middle;
 	    position: relative;
@@ -19,7 +19,7 @@
 	{
 	    width: 850px;
 	    height: 850px;
-	    background-color: #000;
+	    background-color: #777777;
 	    border-radius: 10px;
 		position: absolute;
 		right: 25px;
@@ -33,7 +33,68 @@
 	    width: 800px;
 	    height: 800px;
 	    margin: auto;
-	    padding: 25px;
+	    padding: 0px;
+		position: absolute;
+		right: 25px;
+	    top: 0;
+	    bottom: 0;
+	}
+
+	table
+	{
+		text-align: center;
+		border-collapse: collapse;
+	}
+
+	#Up_Axis
+	{
+		width: 800px;
+		margin-left: 25px;
+	}
+
+	#Up_Axis td
+	{
+		width: 100px;
+		height: 25px;
+	}
+
+	#Down_Axis
+	{
+		position: absolute;
+		bottom: 0px;
+		width: 800px;
+		margin-left: 25px;
+	}
+
+	#Down_Axis td
+	{
+		width: 100px;
+		height: 25px;
+		transform: rotate(180deg);
+	}
+
+	#Left_Axis
+	{
+		width: 25px;
+	}
+
+	#Left_Axis tr
+	{
+		height: 100px;
+	}
+
+	#Right_Axis
+	{
+		bottom: 25px;
+		right: 0px;
+		position: absolute;
+		width: 25px;
+	}
+
+	#Right_Axis tr
+	{
+		height: 100px;
+		transform: rotate(180deg);
 	}
 
 	#pices div
@@ -56,7 +117,7 @@
 	#pices div:nth-child(48) ~ div:nth-child(-2n+56), 
 	#pices div:nth-child(56) ~ div:nth-child(-2n+63)
 	{
-	    background-color: #501111;
+	    background-color: #555555;
 	}
 
 	/*White pawns*/
@@ -131,26 +192,107 @@
 		background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/af/Chess_qdt60.png);
 	}
 
-</style>
+	</style>
+
 </head>
 <body>
+	<div id="frame_outside">
+		<div id="frame_inside">
 
-<div id="frame_outside">
-	<div id="frame_inside">
-		<div id="chessboard">
-			<div id="pices">
-		   		<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-			    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-			    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-			    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-			    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-			    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-			    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-			    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	    	</div>
+			<table id="Up_Axis">
+				<tr>
+					<td>A</td>
+					<td>B</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+					<td>G</td>
+					<td>H</td>
+				</tr>
+			</table>
+
+			<table id="Down_Axis">
+				<tr>
+					<td>A</td>
+					<td>B</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+					<td>G</td>
+					<td>H</td>
+				</tr>
+			</table>
+
+			<table id="Left_Axis">
+				<tr>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>8</td>
+				</tr>
+			</table>
+
+			<table id="Right_Axis">
+				<tr>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>8</td>
+				</tr>
+			</table>
+
+				<div id="chessboard">
+					<div id="pices">
+				   		<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+			    	</div>
+				</div>
+
 		</div>
 	</div>
-</div>
-
 </body>
 </html>
